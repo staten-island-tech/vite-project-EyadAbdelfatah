@@ -1,4 +1,4 @@
-let blenders = [
+const blenders = [
   {
     name: "Ninja Professional Blender",
     brand: "Ninja",
@@ -133,3 +133,5 @@ let blenders = [
     img: "",
   },
 ];
+
+export { blenders };
