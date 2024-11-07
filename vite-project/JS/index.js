@@ -1,20 +1,21 @@
 import "../css/style.css";
-import { blenders } from "./blenders.js";
+import { games } from "./games.js";
 const DOMSelectors = {
   button: document.querySelector("#Theme"),
   container: document.querySelector(".conatiner"),
 };
 
 function CreateCards(arr) {
-  arr.forEach((blender) =>
+  arr.forEach((game) =>
     DOMSelectors.container.insertAdjacentHTML(
       "beforeEnd",
       `<div class="card">
-      <h2>${blender.name}</h2>
-      <img src="${blender.img}" alt="">
-      <h2 class="card-price">${blender.price}</h2>
+      <h2>${game.name}</h2>
+      <img src="${game.img}" alt="">
+      <h2 class="card-price">${game.price}</h2>
+      <h2 class="card-price">${game.rating}</h2>
     </div>`
     )
   );
 }
-CreateCards(blenders);
+CreateCards(games);
