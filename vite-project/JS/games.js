@@ -10,14 +10,14 @@ const games = [
     name: "Red Dead Redemption 2",
     rating: 4.8,
     price: "$59.99",
-    img: "",
+    img: "../images/RDR2.png",
     alt: "Red Dead Redemption 2 - Action-adventure western game",
   },
   {
     name: "Cyberpunk 2077",
     rating: 4.4,
     price: "$49.99",
-    img: "",
+    img: "../images/CB2077.png",
     alt: "Cyberpunk 2077 - Open world sci-fi RPG",
   },
   {
