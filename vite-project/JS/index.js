@@ -1,8 +1,10 @@
 import "../css/style.css";
 import { games } from "./games.js";
 const DOMSelectors = {
-  button: document.querySelector("#Theme"),
+  theme: document.querySelector("#Theme"),
   container: document.querySelector(".container"),
+  price: document.querySelector("#price"),
+  rating: document.querySelector("rating"),
 };
 
 function CreateCards(arr) {
@@ -19,3 +21,8 @@ function CreateCards(arr) {
   );
 }
 CreateCards(games);
+function sortPrice(arr) {
+  arr.sort((a, b) => a - b);
+  console.log(arr);
+}
+sortPrice(games);
