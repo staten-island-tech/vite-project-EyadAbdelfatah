@@ -1,28 +1,58 @@
 import "../css/style.css";
 import { games } from "./games.js";
+
 const DOMSelectors = {
   theme: document.querySelector("#Theme"),
   container: document.querySelector(".container"),
   price: document.querySelector("#price"),
-  rating: document.querySelector("rating"),
+  rating: document.querySelector("#rating"),
+  reset: document.querySelector("#reset"),
 };
-
+// arr.sort((a, b) => a.name.localeCompare(b.name));
 function CreateCards(arr) {
   arr.forEach((game) =>
     DOMSelectors.container.insertAdjacentHTML(
       "beforeEnd",
       `<div class="card">
-      <h2>${game.name}</h2>
-      <img src="${game.img}" alt="">
-      <h2 class="card-price">${game.price}</h2>
-      <h2 class="card-price">${game.rating}</h2>
-    </div>`
+        <h3>${game.name}</h3>
+        <img src="${game.img}" alt="${game.alt}">
+        <h3 class="card-price">$${game.price}</h3>
+        <h3 class="card-rating">Rating: ${game.rating}</h3>
+      </div>`
     )
   );
 }
+reset(games);
 CreateCards(games);
+
 function sortPrice(arr) {
-  arr.sort((a, b) => a - b);
-  console.log(arr);
+  arr.sort((a, b) => a.price - b.price);
+  clear();
+  CreateCards(arr);
 }
-sortPrice(games);
+
+function sortRating(arr) {
+  arr.sort((a, b) => b.rating - a.rating);
+  clear();
+  CreateCards(arr);
+}
+
+function clear() {
+  DOMSelectors.container.innerHTML = "";
+}
+function reset(arr) {
+  arr.sort((a, b) => a.name.localeCompare(b.name));
+  clear();
+  CreateCards(games);
+}
+DOMSelectors.price.addEventListener("click", function () {
+  sortPrice(games);
+});
+
+DOMSelectors.rating.addEventListener("click", function () {
+  sortRating(games);
+});
+
+DOMSelectors.reset.addEventListener("click", function () {
+  reset(games);
+});
