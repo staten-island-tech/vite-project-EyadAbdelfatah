@@ -58,25 +58,7 @@ body {
   justify-content: space-between;
 }
 
-button {
-  padding: 10px 20px; /* Add padding to the buttons */
-  font-size: 16px; /* Adjust font size */
-  cursor: pointer; /* Make the cursor a pointer when hovering over the button */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Optional, for rounded corners */
-  background-color: #3a0606; /* Set a background color */
-  color: white; /* Text color */
-  white-space: nowrap; /* Prevent the button text from wrapping */
-}
-button:hover {
-  background-color: #230303; /* Change the background color when hovering */
-}
-#buttons {
 
-  justify-content: center; /* Center buttons horizontally */
-  gap: 10px; /* Add space between buttons */
-  margin-top: 20px; /* Optional, adjust spacing from the top */
-}
 img {
   object-fit: contain;
   height: 200px;
