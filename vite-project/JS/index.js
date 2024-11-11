@@ -29,7 +29,7 @@ function toggleTheme() {
   }
 }
 reset(games);
-CreateCards(games);
+
 function sortPrice(arr) {
   arr.sort((a, b) => a.price - b.price);
   clear();
@@ -46,7 +46,7 @@ function clear() {
 function reset(arr) {
   arr.sort((a, b) => a.name.localeCompare(b.name));
   clear();
-  CreateCards(games);
+  CreateCards(arr);
 }
 DOMSelectors.price.addEventListener("click", function () {
   sortPrice(games);
