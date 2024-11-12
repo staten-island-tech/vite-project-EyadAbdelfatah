@@ -6,8 +6,11 @@ const DOMSelectors = {
   price: document.querySelector("#price"),
   rating: document.querySelector("#rating"),
   reset: document.querySelector("#reset"),
+  filter:document.querySelector("#filterForm"),
+  ratingInput: document.querySelector("#ratingInput"),
 };
 function CreateCards(arr) {
+  clear()
   arr.forEach((game) =>
     DOMSelectors.container.insertAdjacentHTML(
       "beforeEnd",
@@ -48,6 +51,15 @@ function reset(arr) {
   clear();
   CreateCards(arr);
 }
+function filterByRating(event) {
+
+  const rating = DOMSelectors.ratingInput.value;
+  const filteredGames = games.filter(game => game.rating >= rating);
+  console.log(filteredGames)
+
+
+  CreateCards(filteredGames);
+}
 DOMSelectors.price.addEventListener("click", function () {
   sortPrice(games);
 });
@@ -59,4 +71,8 @@ DOMSelectors.reset.addEventListener("click", function () {
 });
 DOMSelectors.theme.addEventListener("click", function () {
   toggleTheme();
+});
+DOMSelectors.filter.addEventListener("submit", function () {
+  event.preventDefault();
+  filterByRating();
 });

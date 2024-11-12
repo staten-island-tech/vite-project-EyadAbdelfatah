@@ -70,12 +70,15 @@ img {
   height: 200px;
   width: auto;
 }
-#buttons {
+#buttons,form {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-button {
+::placeholder{
+  font-size: var(.1px);
+}
+button,label {
   padding: 1rem 2rem;
   font-size: 1.4rem;
   color: white;

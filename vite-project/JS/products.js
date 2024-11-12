@@ -37,7 +37,7 @@ const games = [
   {
     name: "It Takes Two",
     rating: 4.5,
-    price: 1,
+    price: 39.99,
     img: "./images/takestwo.png",
     alt: "It takes two",
   },
@@ -105,7 +105,7 @@ const games = [
     alt: "Animal Crossing: New Horizons - Life simulation game",
   },
   {
-    name: "Dragon Age Inquisitaion",
+    name: "Dragon Age Inquisition",
     rating: 4.7,
     price: 39.99,
     img: "./images/dai.png",
