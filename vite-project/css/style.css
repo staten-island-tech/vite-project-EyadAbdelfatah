@@ -6,12 +6,9 @@ body,
   box-sizing: border-box;
   font-size: 10px;
 }
-
 :root {
-
   --dark-blue: #050929;
   --cool-border:#143eff;
-
   --dark-red: #3f0d0d;
   --warm-border:#c88e6f;
   --h1: 7.594rem;
@@ -20,7 +17,6 @@ body,
   --h4: 2.25rem;
   --h5: 1.5rem;
 }
-
 h1 {
   font-size: var(--h1);
   text-align: center;
@@ -43,7 +39,6 @@ body {
   height: 360px;
   margin: 1rem auto;
   width: 24%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,19 +59,10 @@ body {
   margin: 2rem auto;
   justify-content: space-between;
 }
-
-img {
-  object-fit: contain;
-  height: 200px;
-  width: auto;
-}
 #buttons,form {
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
-::placeholder{
-  font-size: var(.1px);
 }
 button,label {
   padding: 1rem 2rem;
