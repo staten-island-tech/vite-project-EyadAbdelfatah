@@ -6,26 +6,24 @@ body,
   box-sizing: border-box;
   font-size: 10px;
 }
-
 :root {
-  --light-blue: #2998ff;
-  --dark-blue: #135cc5;
-  --light-red: #ff2a2a;
-  --dark-red: #dc2626;
+  --dark-blue: #050929;
+  --cool-border:#143eff;
+  --dark-red: #3f0d0d;
+  --warm-border:#c88e6f;
   --h1: 7.594rem;
   --h2: 5.063rem;
   --h3: 3.375rem;
   --h4: 2.25rem;
   --h5: 1.5rem;
 }
-
 h1 {
   font-size: var(--h1);
   text-align: center;
 }
-
-h2 {
-  font-size: var(--h2);
+h3 {
+  font-size: var(--h3);
+  text-align: center;
 }
 
 body {
@@ -33,32 +31,30 @@ body {
 }
 
 .warm {
-  --primary: var(--light-red);
+  --primary: var(--dark-red);
 }
 
 .cool {
-  --primary: var(--light-blue);
+  --primary: var(--dark-blue);
 }
 
 .card {
-  border: 2rem solid orange;
-  padding: 1rem;
-  margin-right: 10px;
-  margin-left: 10px;
-
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 0.5rem;
-  width: 26%;
-  height: 475px;
+  height: 360px;
+  margin: 1rem auto;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
   box-shadow: 0 0 12px 0 white;
 }
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.warm .card{
+  border: 2rem solid var(--warm-border);
 }
-
+.cool .card{
+  border: 2rem solid var(--cool-border);
+}
 .container {
   display: flex;
   justify-content: center;
@@ -67,33 +63,26 @@ body {
   flex-wrap: wrap;
   margin-top: 100px;
 }
-
+#buttons,form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+button,label {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 1rem white;
+}
+.warm button {
+  background-color: var(--dark-red);
+}
+.cool button{
+  background-color: var(--dark-blue);
+}
 img {
-  object-fit: cover;
+  width: 100%;
   height: 200px;
-  width: auto;
-}
-
-@media (max-width: 1200px) {
-  .card {
-    width: 30%;
-  }
-}
-
-@media (max-width: 900px) {
-  .card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 400px) {
-  .card {
-    width: 100%;
-  }
+  object-fit: cover;
+  object-position: center; 
 }
